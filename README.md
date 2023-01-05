@@ -5,7 +5,7 @@
 This is a Docker multi-arch image for a light NFS client ([![Docker Image Size](https://badgen.net/docker/size/d3fk/nfs-client/latest?icon=docker&label=compressed)](https://hub.docker.com/r/d3fk/nfs-client/tags)) compatible with database usage.
 
 We provide 2 tags for this image
-- **latest**: which is the historical tag that is set for **NFS 3** by default but the ENV enable you to change easily to **NFS 4** or any other filesystem types supported.
+- **latest**: which is the historical tag that is set for **NFS 3** by default but the ENVs enable you to change easily to **NFS 4** or any other filesystem types supported.
 - **v4**: which is set by default to **NFS 4** as a ready to go nfs4 client.
 
 
@@ -22,8 +22,8 @@ Docker hub repository: https://hub.docker.com/r/d3fk/nfs-client/
 
 ### Image TAGS
 
-- **d3fk/nfs-client:latest** which is the default image when using d3fk/nfs-client but is set with nfs3 
-- **d3fk/nfs-client:v4** which is ready to go as nfs4 client.
+- **d3fk/nfs-client:latest** which is the default image when using d3fk/nfs-client but is set with nfs3 (nfs4 and other supported fstypes available by setting ENVs)
+- **d3fk/nfs-client:v4** which is ready to go as nfs4 client (ENVs still permit to change the default fstype).
 
 [![DockerHub Badge](https://lucky-red-wombat.cyclic.app/image/d3fk/nfs-client)](https://hub.docker.com/r/d3fk/nfs-client)
 

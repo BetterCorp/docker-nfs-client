@@ -1,4 +1,4 @@
-FROM       alpine:latest
+FROM alpine:latest
 LABEL org.opencontainers.image.authors="d3fk"
 
 # USAGE
@@ -25,7 +25,7 @@ ENV FSTYPE nfs
 ENV MOUNT_OPTIONS nfsvers=3
 ENV MOUNTPOINT /mnt/nfs-1
 
-RUN apk update && apk add nfs-utils && rm -rf /var/cache/apk/*
+RUN apk upgrade && apk add --no-cache nfs-utils
 
 # https://github.com/rancher/os/issues/641#issuecomment-157006575
 RUN rm /sbin/halt /sbin/poweroff /sbin/reboot

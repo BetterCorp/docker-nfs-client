@@ -11,4 +11,5 @@ mount -t "$FSTYPE" -o "$MOUNT_OPTIONS" "$SERVER:$SHARE" "$MOUNTPOINT"
 fi
 mount | grep nfs
 
-while true; do sleep 1000; done
+# Execute the command passed to the container
+exec "$@"
